@@ -1,0 +1,141 @@
+<!DOCTYPE HTML-->
+<html>
+<head>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.css"  />
+<link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.css" />
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+<style type="text/css">
+    #encabezado{
+        
+       text-align: center;
+       font-size:15px;
+       color:blue;
+       font-weight: bold;
+       
+    }
+    #botones{
+        
+       text-align: center;
+       font-size:30px;
+       color:blue;
+       font-weight: lighter;
+       background-color:white;
+       
+       
+    }
+</style>
+    
+<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
+<script type="text/javascript">
+    
+    $("document").ready(function inicio(){
+        $("#Sumar").tap(function(){
+			var num=parseInt($("#txtnum1").val());
+			var num2=parseInt($("#txtnum2").val());
+		var res = num+num2;
+        alert("tu suma  es: " + res);
+	
+    });
+    $("#Restar").tap(function(){
+			var num3=parseInt($("#txtnum3").val());
+			var num4=parseInt($("#txtnum4").val());
+		var res1 = num3-num4;
+        alert("tu resta es: " + res1);
+	
+    });
+    $("#Dividir").tap(function(){
+			var num5=parseInt($("#txtnum5").val());
+			var num6=parseInt($("#txtnum6").val());
+		var res2 = num5/num6;
+        alert("tu divicion  es: " + res2);
+	
+    });
+    $("#Multiplicar").tap(function(){
+			var num7=parseInt($("#txtnum7").val());
+			var num8=parseInt($("#txtnum8").val());
+		var res3 = num7*num8;
+        alert("tu multiplicacion  es: " + res3);
+	
+    });
+    });    
+
+</script>
+</head>
+<body>
+
+<div data-role="page" id="principal">
+    <div data-role="header">                 
+        <h1  id="encabezado" >BD PARA DISPOSITIVOS MOVILES</h1>
+             </div>
+              <div data-role="content">
+<p id="encabezado">Operaciones</p>
+<a id="botones" href="#PSuma" data-role="button" data-transition="slidefade" >Sumar</a>             
+<a id="botones" href="#PResta" data-role="button" data-transition="slidefade">Restar</a>
+<a id="botones"  href="#PDividicion" data-role="button" data-transition="slidefade">Dividir</a>
+<a id="botones" href="#PMultiplicacion" data-role="button" data-transition="slidefade">Multiplicar</a>
+</div>
+</div>
+
+<div data-role="page" id="PSuma">
+             <div data-role="header">
+     <h1>Sumar</h1>
+             </div>
+              <div data-role="content">
+                    <input type="text"  id="txtnum1" placeholder="num"/>
+                   <input type="text"  id="txtnum2" placeholder="num2"/>
+                     <input type="button"  id="Sumar" value="Sumar"/>
+              </div>
+              <div data-role="footer">
+
+               </div>
+</div>
+
+<div data-role="page" id="PResta">
+             <div data-role="header">
+     <h1>Resta</h1>
+             </div>
+              <div data-role="content">
+                  <input type="text"  id="txtnum3" placeholder="num"/>
+                   <input type="text"  id="txtnum4" placeholder="num2"/>
+                     <input type="button"  id="Restar" value="Restar"/>
+  </div>
+              <div data-role="footer">
+
+               </div>
+</div>
+    
+ <div data-role="page" id="PDividicion">
+             <div data-role="header">
+     <h1>Divicion</h1>
+             </div>
+              <div data-role="content">
+                  <input type="text"  id="txtnum5" placeholder="num"/>
+                   <input type="text"  id="txtnum6" placeholder="num2"/>
+                     <input type="button"  id="Dividir" value="Dividir"/>
+
+  </div>
+              <div data-role="footer">
+               </div>
+</div> 
+    
+<div data-role="page" id="PMultiplicacion">
+             <div data-role="header">
+     <h1>Multiplicacion</h1>
+             </div>
+              <div data-role="content">
+                  <input type="text"  id="txtnum7" placeholder="num"/>
+                   <input type="text"  id="txtnum8" placeholder="aqui va el segundo "/>
+                     <input type="button"  id="Multiplicar" value="Multiplicar"/>
+              </div>
+              <div data-role="footer">
+
+               </div>
+</div>
+
+</html>
